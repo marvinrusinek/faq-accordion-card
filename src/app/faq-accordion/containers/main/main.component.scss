@@ -1,0 +1,85 @@
+main {
+  display: flex;
+  justify-content: center;
+  background-color: #8665e8;
+  height: 120vh;
+  margin: -10px;
+
+  mat-card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    width: 800px;
+    height: fit-content;
+    margin-top: 7.5%;
+    margin-bottom: 7.5%;
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      border-radius: 20px;
+
+      .image {
+        display: grid;
+
+        img {
+          width: 400px;
+          height: 350px;
+          margin-left: 10px;
+          align-self: center;
+          padding-right: 50px;
+        }
+      }
+
+      .faq {
+        h1 {
+          font-size: 36px;
+          font-weight: bold;
+        }
+
+        details {
+          margin-bottom: 30px;
+
+          p {
+            margin-top: 15px;
+          }
+        }
+
+        details > summary {
+          list-style: none;
+        }
+
+        summary::-webkit-details-marker {
+          display: none;
+        }
+
+        summary::after {
+          content: ' ▼';
+        }
+
+        details[open] summary:after {
+          content: ' ▲';
+        }
+      }
+    }
+  }
+
+  .attribution {
+    font-size: 11px;
+    color: black;
+    position: fixed;
+    bottom: 0;
+    left: 37.5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    a {
+      color: hsl(228, 45%, 44%);
+
+      &:hover {
+        color: turquoise;
+      }
+    }
+  }
+}
